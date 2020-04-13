@@ -1,0 +1,28 @@
+# Repositories
+.git
+.gitignore
+
+# IDEs
+.vs
+.idea
+
+# Non-production configs
+*.env
+
+# Code quality checks
+.eslintrc
+.eslint
+.jest.config
+*.test.*
+coverage
+
+# Source codes and uncompiled src
+src
+*.ts
+
+# Non-production items in our codes
+*.log
+docs
+
+# We need to add node modules as this ensures dev ependency files are not added
+node_modules

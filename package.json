@@ -1,6 +1,6 @@
 {
   "name": "swish-auth",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Authentication service designed with data privacy and control as top priority",
   "main": "index.js",
   "scripts": {

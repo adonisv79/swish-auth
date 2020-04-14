@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:10-alpine
 LABEL description="swish authentication project"
 LABEL author="Adonis Lee Villamor (adonisv79@gmail.com)"
 

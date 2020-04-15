@@ -5,9 +5,11 @@ import config from '../config';
 import logger from '../services/Logger';
 import loadHealthCheck from './HealthCheckLoader';
 import swishMiddleWare from './swish-session';
+import securityLoader from './security';
 
 async function initialize(app: e.Express): Promise<void> {
   logger.info(`Initializing server for the "${config.server.deploymentType}" environment...`);
+  securityLoader(app);
   const publicPath = path.join(__dirname, './../public');
   app.use(bodyParser.json());
   logger.info(`Serving public files from "${publicPath}"...`);

@@ -16,7 +16,7 @@ function initRedis(): void {
   const redisOptions: RedisSessionOptions = {
     host: config.redis.host,
     port: config.redis.port,
-    db: config.redis.db,
+    db: config.redis.dbs.sessions,
     password: config.redis.password,
     sessionMaxTTL: config.session.maxTTL,
     sessionRefreshTTL: true,

@@ -8,5 +8,5 @@ An opensource user management system with data privacy in mind
 # Docker
 Runing in docker
 ```
-docker run -it --name s-auth -p 3001:3000 -e REDIS_HOST=127.0.0.1 -e REDIS_PORT=6379 -e REDIS_DB=0 -e REDIS_PASS=password adonisv79/swish-auth:latest
+docker run -d --name s-auth -p 3000:3000 -e REDIS_HOST=redis-sess -e REDIS_PORT=6379 -e REDIS_DB=0 -e INGRESS_RATELIMIT_POINTS=8 -e INGRESS_RATELIMIT_DURATION=2 -e INGRESS_RATELIMIT_BLOCKDURATION=3 --link redis-sess adonisv79/swish-auth:latest
 ```

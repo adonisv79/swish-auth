@@ -11,6 +11,9 @@ const singleton = {
     },
     password: process.env.REDIS_PASS ? process.env.REDIS_PASS as string : undefined,
   },
+  mongodb: {
+    connectionString: process.env.MONGODB_CONN ? process.env.MONGODB_CONN as string : 'mongodb://localhost:27017/test',
+  },
   session: {
     maxTTL: process.env.USER_SESSION_MAX_TTL ? parseInt(process.env.USER_SESSION_MAX_TTL as string, 10) : 21600,
     idleTTL: process.env.USER_SESSION_IDLE_TTL ? parseInt(process.env.USER_SESSION_IDLE_TTL as string, 10) : 1800,

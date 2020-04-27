@@ -1,7 +1,9 @@
 import API from './api';
 import loaders from './loaders';
 
-const api = new API(3000);
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+
+const api = new API(port);
 api.on('loading', async (app) => {
   await loaders.init(app);
 });

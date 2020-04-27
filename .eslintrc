@@ -20,10 +20,16 @@
   },
   "rules": {
     "@typescript-eslint/no-var-requires": 0,
+    "no-useless-escape": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": [
       "error",
       { "devDependencies": true }
+    ],
+    "camelcase": "off",
+    "@typescript-eslint/camelcase": [
+      "error",
+      { "properties": "never" }
     ],
     "max-len": [
       "error",

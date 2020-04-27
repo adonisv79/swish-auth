@@ -6,7 +6,7 @@
   "scripts": {
     "clonestatic": "cp -r ./src/public ./dist/src/public",
     "postinstall": "tsc",
-    "build": "tsc && clonestatic",
+    "build": "tsc && npm run clonestatic",
     "start": "node dist/src/index.js",
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx",

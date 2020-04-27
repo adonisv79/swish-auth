@@ -4,17 +4,15 @@
   "description": "Authentication service designed with data privacy and control as top priority",
   "main": "index.js",
   "scripts": {
+    "postinstall": "tsc",
     "build": "tsc",
-    "postinstall": "npm run build-ts",
-    "start": "npm run serve",
-    "serve": "node dist/src/index.js",
-    "debug:dev": "ts-node src/index.ts",
-    "debug:build": "node dist/src/index.js",
+    "start": "node dist/src/index.js",
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx",
     "lint-fix": "eslint . --ext .ts,.tsx --fix",
-    "build:docker": "build.bat dev",
-    "build:prod": "build.bat prod"
+    "debug:dev": "ts-node src/index.ts",
+    "build:dockerdev": "build.bat dev",
+    "build:dockerprod": "build.bat prod"
   },
   "repository": {
     "type": "git",

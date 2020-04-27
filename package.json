@@ -4,8 +4,9 @@
   "description": "Authentication service designed with data privacy and control as top priority",
   "main": "index.js",
   "scripts": {
+    "clonestatic": "cp -r ./src/public ./dist/src/public",
     "postinstall": "tsc",
-    "build": "tsc",
+    "build": "tsc && clonestatic",
     "start": "node dist/src/index.js",
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx",
